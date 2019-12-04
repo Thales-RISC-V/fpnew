@@ -30,7 +30,8 @@
 // Enable signals on the registers will lead to clock-gated pipeline stages when this optimization
 // is enabled during synthesis. Make sure to optimize clock gates through hierarchies.
 
-`include "common_cells/registers.svh"
+//`include "common_cells/registers.svh"
+`include "registers.svh"
 
 module fpnew_pipe_out #(
   parameter int unsigned Width         = 32,

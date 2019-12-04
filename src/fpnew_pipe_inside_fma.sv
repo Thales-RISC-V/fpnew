@@ -32,7 +32,8 @@
 
 // Author: Stefan Mach <smach@iis.ee.ethz.ch>
 
-`include "common_cells/registers.svh"
+//`include "common_cells/registers.svh"
+`include "registers.svh"
 
 module fpnew_pipe_inside_fma #(
   parameter int unsigned ExpWidth    = 10,
@@ -42,8 +43,11 @@ module fpnew_pipe_inside_fma #(
   parameter type         TagType     = logic,
   parameter type         AuxType     = logic,
   // Do not change
-  localparam int unsigned SUM_WIDTH          = 3*PrecBits+3+1,
-  localparam int unsigned SHIFT_AMOUNT_WIDTH = $clog2(3 * PrecBits + 3)
+  //localparam int unsigned SUM_WIDTH          = 3*PrecBits+3+1,
+  //localparam int unsigned SHIFT_AMOUNT_WIDTH = $clog2(3 * PrecBits + 3)
+
+  parameter int unsigned SUM_WIDTH          = 3*PrecBits+3+1,
+  parameter int unsigned SHIFT_AMOUNT_WIDTH = $clog2(3 * PrecBits + 3)
 ) (
   input  logic                          clk_i,
   input  logic                          rst_ni,
